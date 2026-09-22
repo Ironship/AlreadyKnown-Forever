@@ -41,5 +41,10 @@ SlashCmdList["AKFOREVER"] = function()
 		tostring(_G.C_TransmogCollection ~= nil), tostring(_G.C_TooltipInfo ~= nil)))
 	say(string.format("merchant hook in place: %s -- open a vendor and known items turn colour",
 		tostring(type(_G.MerchantFrame_UpdateMerchantInfo) == "function")))
+	-- Did the conditional file load? The addon proper registers this command
+	-- as it loads, so its absence is the answer.
+	say(string.format("the addon file itself loaded: %s  (the toc asks for it with "
+		.. "[AllowLoadGameType classic, camelot])",
+		tostring(SlashCmdList and SlashCmdList.ALREADYKNOWN ~= nil)))
 	say("colours and the rest: /ak")
 end

@@ -9,4 +9,8 @@
 ## X-Upstream: https://github.com/ahakola/AlreadyKnown
 
 forever.lua
-AlreadyKnownClassic.lua
+# Deliberately conditional for one reload, to find out whether this client
+# accepts the game-type token. kemayo's SilverDragon ships
+# [AllowLoadGameType vanilla, tbc, wrath, cata, camelot] and is installed here,
+# so the token exists; whether the file then loads is what /akforever answers.
+AlreadyKnownClassic.lua [AllowLoadGameType classic, camelot]
