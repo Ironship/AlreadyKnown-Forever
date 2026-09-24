@@ -33,6 +33,12 @@ Vanilla client says it, and it guards every collections call it makes.
 
 Everything else is upstream's, unchanged. The Retail file is not shipped.
 
+Upstream 1.103 (2026-09-24) supports Forever itself and makes the same choice:
+the Classic file loads there (`[AllowLoadGameType classic, camelot]`) and the
+Retail file does not. It still sets `isClassic` from `WOW_PROJECT_ID`, which
+reads as Retail on this client, so the Vanilla paths stay off. That line is why
+this port is still here.
+
 ## What the client actually answered
 
 Measured in the game on 2026-09-20, build 1.60.1 (69913), interface 16001:
@@ -63,4 +69,4 @@ Forever, which collections exist, and whether the vendor hook took.
 MIT, upstream's, in `LICENSE.md` — Copyright (c) 2015-2026 ahakola. This folder
 is a modified redistribution; the changes are the table above.
 
-Upstream at the time of the port: 1.102.
+Upstream at the time of the port: 1.102. Brought up to 1.103 on 2026-09-25.
