@@ -1,6 +1,7 @@
 ## Interface: 16001
 ## Author: Sanex (Arathor EU) (port: Ironship)
 ## Title: Already Known? |cff59aefa(Forever)|r
+## IconTexture: Interface\AddOns\AlreadyKnown-Forever\icon
 ## Version: 1.103-forever2
 ## Notes: Tints already known recipes, pets and other learnable items at vendors, the auction house and the guild bank. Sanex's addon, made to load on World of Warcraft: Forever.
 ## SavedVariables: AlreadyKnownSettings
