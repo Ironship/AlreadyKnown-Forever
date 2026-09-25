@@ -26,7 +26,9 @@ AlreadyKnownForever = {
 
 SLASH_AKFOREVER1 = "/akforever"
 SLASH_AKFOREVER2 = "/akf"
-SlashCmdList = SlashCmdList or {}
+-- Only a key of the game's own table is written. Assigning the global itself
+-- ("SlashCmdList = SlashCmdList or {}") tainted it, and the next secure code to
+-- read it -- /run and its script prompt -- was blocked and blamed on this addon.
 SlashCmdList["AKFOREVER"] = function()
 	local function say(text)
 		print("|cffffcc00" .. ADDON_NAME .. ":|r " .. text)
